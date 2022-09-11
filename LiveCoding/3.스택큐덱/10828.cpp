@@ -1,3 +1,4 @@
+//LiveCoding
 //10828_스택 : stack 구현하기
 #include <iostream>
 #include <vector>
