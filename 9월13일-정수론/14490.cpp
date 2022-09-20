@@ -16,15 +16,15 @@ int main(){
 	string input;
 	int i=0, n=0, m=0, gcd;
 
-	//ÀÔ·Â
+	//ìž…ë ¥
 	cin >> input;
-	//n°ú m ÀÔ·Â ¹Þ±â
+	//nê³¼ m ìž…ë ¥ ë°›ê¸°
 	for (i = 0; input[i] != ':'; i++)
 		n = n * 10 + input[i] - '0';
 	for (++i; i < input.length(); i++)
 		m = m * 10 + input[i] - '0';
-	//ÃÖ´ë°ø¾à¼ö ±¸ÇÏ±â
+	//ìµœëŒ€ê³µì•½ìˆ˜ êµ¬í•˜ê¸°
 	gcd = gcdIter(max(n, m), min(n, m));
-	//Ãâ·Â
+	//ì¶œë ¥
 	cout << n/gcd << ':' << m/gcd;
 }

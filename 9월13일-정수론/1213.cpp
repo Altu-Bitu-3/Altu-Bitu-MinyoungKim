@@ -3,21 +3,21 @@
 #include <algorithm>
 using namespace std;
 
-//È¦¼ö °³ ¹®ÀÚ°¡ ¸î °³ÀÎÁö È®ÀÎÇÏ¿© ¸®ÅÏÇÏ´Â ÇÔ¼ö + °¡¿îµ¥ ¹®ÀÚµµ ÀúÀå
+//í™€ìˆ˜ ê°œ ë¬¸ìê°€ ëª‡ ê°œì¸ì§€ í™•ì¸í•˜ì—¬ ë¦¬í„´í•˜ëŠ” í•¨ìˆ˜ + ê°€ìš´ë° ë¬¸ìë„ ì €ì¥
 int cntOdd(vector<int> alpha, char &mid){
-	int cnt = 0; //alphaÀÇ °ª Áß È¦¼öÀÎ °Í Ã¼Å©
+	int cnt = 0; //alphaì˜ ê°’ ì¤‘ í™€ìˆ˜ì¸ ê²ƒ ì²´í¬
 
 	for (char i = 'A'; i <= 'Z'; i++){
 		if (alpha[i]%2){
 			cnt++;
-			mid = i;	//ÀÌ ÇÔ¼ö ¸®ÅÏ °ªÀÌ 1ÀÏ ¶§¸¸ mid »ç¿ë
+			mid = i;	//ì´ í•¨ìˆ˜ ë¦¬í„´ ê°’ì´ 1ì¼ ë•Œë§Œ mid ì‚¬ìš©
 		}
 	}
 
 	return cnt;
 }
 
-//ÆÓ¸°µå·Ò ¸¸µå´Â ÇÔ¼ö
+//íŒ°ë¦°ë“œë¡¬ ë§Œë“œëŠ” í•¨ìˆ˜
 string makePal(vector<int> alpha, char mid){
 	string s;
 	string tmp;
@@ -35,15 +35,15 @@ string makePal(vector<int> alpha, char mid){
 }
 
 int main(){
-	vector<int> alpha(91, 0); //'Z'ÀÇ ¾Æ½ºÅ°ÄÚµå °ªÀÌ 90ÀÌ¹Ç·Î 91°³ ÃÊ±âÈ­
+	vector<int> alpha(91, 0); //'Z'ì˜ ì•„ìŠ¤í‚¤ì½”ë“œ ê°’ì´ 90ì´ë¯€ë¡œ 91ê°œ ì´ˆê¸°í™”
 	string name;
 	string nameToPal="";
 	char mid=0;
 
-	//ÀÔ·Â
+	//ì…ë ¥
 	cin >> name;
 
-	//ÀÔ·Â ¹ŞÀº ÀÌ¸§ÀÇ °¢ ¹®ÀÚÀÇ ¾Æ½ºÅ°ÄÚµå¿¡ ÇØ´çÇÏ´Â ÀÎµ¦½ºÀÇ °ªÀ» ¿Ã¸®±â
+	//ì…ë ¥ ë°›ì€ ì´ë¦„ì˜ ê° ë¬¸ìì˜ ì•„ìŠ¤í‚¤ì½”ë“œì— í•´ë‹¹í•˜ëŠ” ì¸ë±ìŠ¤ì˜ ê°’ì„ ì˜¬ë¦¬ê¸°
 	for (int i = 0; i < name.length(); i++)
 		alpha[name[i]]++;
 	if(cntOdd(alpha, mid) >= 2)
