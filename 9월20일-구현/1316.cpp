@@ -15,7 +15,7 @@ int main(){
 		string word;
 		cin >> word;
 		for (int j = 0; j < word.length(); j++){
-			while (j+1 < word.length() && word[j] = word[j+1])
+			while (j+1 < word.length() && word[j] == word[j+1])
 				j++;
 			if (alpha[word[j]]!= 0){ //그룹 단어 아님
 				flag = 0;
@@ -27,4 +27,5 @@ int main(){
 		if (flag)
 			ans++;
 	}
+	cout << ans;
 }
